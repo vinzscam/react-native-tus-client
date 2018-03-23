@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC5DB0E82040494700458D79 /* TUSFileData.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0DB2040494600458D79 /* TUSFileData.m */; };
+		AC5DB0E92040494700458D79 /* TUSSession.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0DD2040494700458D79 /* TUSSession.m */; };
+		AC5DB0EA2040494700458D79 /* TUSAssetData.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0DF2040494700458D79 /* TUSAssetData.m */; };
+		AC5DB0EB2040494700458D79 /* TUSUploadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0E02040494700458D79 /* TUSUploadStore.m */; };
+		AC5DB0EC2040494700458D79 /* TUSErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0E12040494700458D79 /* TUSErrors.m */; };
+		AC5DB0ED2040494700458D79 /* TUSFileUploadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0E22040494700458D79 /* TUSFileUploadStore.m */; };
+		AC5DB0EE2040494700458D79 /* TUSData.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0E62040494700458D79 /* TUSData.m */; };
+		AC5DB0EF2040494700458D79 /* TUSResumableUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0E72040494700458D79 /* TUSResumableUpload.m */; };
+		B3E7B58A1CC2AC0600A0062D /* RNTusClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNTusClient.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		58B511D91A9E6C8500147676 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		134814201AA4EA6300B7C361 /* libRNTusClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNTusClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5DB0D62040494600458D79 /* TUSErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSErrors.h; sourceTree = "<group>"; };
+		AC5DB0D72040494600458D79 /* TUSResumableUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSResumableUpload.h; sourceTree = "<group>"; };
+		AC5DB0D82040494600458D79 /* TUSSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSSession.h; sourceTree = "<group>"; };
+		AC5DB0D92040494600458D79 /* TUSFileUploadStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSFileUploadStore.h; sourceTree = "<group>"; };
+		AC5DB0DA2040494600458D79 /* TUSUploadStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSUploadStore.h; sourceTree = "<group>"; };
+		AC5DB0DB2040494600458D79 /* TUSFileData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSFileData.m; sourceTree = "<group>"; };
+		AC5DB0DC2040494700458D79 /* TUSResumableUpload+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TUSResumableUpload+Private.h"; sourceTree = "<group>"; };
+		AC5DB0DD2040494700458D79 /* TUSSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSSession.m; sourceTree = "<group>"; };
+		AC5DB0DE2040494700458D79 /* TUSFileData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSFileData.h; sourceTree = "<group>"; };
+		AC5DB0DF2040494700458D79 /* TUSAssetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSAssetData.m; sourceTree = "<group>"; };
+		AC5DB0E02040494700458D79 /* TUSUploadStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSUploadStore.m; sourceTree = "<group>"; };
+		AC5DB0E12040494700458D79 /* TUSErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSErrors.m; sourceTree = "<group>"; };
+		AC5DB0E22040494700458D79 /* TUSFileUploadStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSFileUploadStore.m; sourceTree = "<group>"; };
+		AC5DB0E32040494700458D79 /* TUSKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSKit.h; sourceTree = "<group>"; };
+		AC5DB0E42040494700458D79 /* TUSData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSData.h; sourceTree = "<group>"; };
+		AC5DB0E52040494700458D79 /* TUSAssetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSAssetData.h; sourceTree = "<group>"; };
+		AC5DB0E62040494700458D79 /* TUSData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSData.m; sourceTree = "<group>"; };
+		AC5DB0E72040494700458D79 /* TUSResumableUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSResumableUpload.m; sourceTree = "<group>"; };
+		B3E7B5881CC2AC0600A0062D /* RNTusClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNTusClient.h; sourceTree = "<group>"; };
+		B3E7B5891CC2AC0600A0062D /* RNTusClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTusClient.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58B511D81A9E6C8500147676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		134814211AA4EA7D00B7C361 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				134814201AA4EA6300B7C361 /* libRNTusClient.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58B511D21A9E6C8500147676 = {
+			isa = PBXGroup;
+			children = (
+				AC5DB0E52040494700458D79 /* TUSAssetData.h */,
+				AC5DB0DF2040494700458D79 /* TUSAssetData.m */,
+				AC5DB0E42040494700458D79 /* TUSData.h */,
+				AC5DB0E62040494700458D79 /* TUSData.m */,
+				AC5DB0D62040494600458D79 /* TUSErrors.h */,
+				AC5DB0E12040494700458D79 /* TUSErrors.m */,
+				AC5DB0DE2040494700458D79 /* TUSFileData.h */,
+				AC5DB0DB2040494600458D79 /* TUSFileData.m */,
+				AC5DB0D92040494600458D79 /* TUSFileUploadStore.h */,
+				AC5DB0E22040494700458D79 /* TUSFileUploadStore.m */,
+				AC5DB0E32040494700458D79 /* TUSKit.h */,
+				AC5DB0D72040494600458D79 /* TUSResumableUpload.h */,
+				AC5DB0E72040494700458D79 /* TUSResumableUpload.m */,
+				AC5DB0DC2040494700458D79 /* TUSResumableUpload+Private.h */,
+				AC5DB0D82040494600458D79 /* TUSSession.h */,
+				AC5DB0DD2040494700458D79 /* TUSSession.m */,
+				AC5DB0DA2040494600458D79 /* TUSUploadStore.h */,
+				AC5DB0E02040494700458D79 /* TUSUploadStore.m */,
+				B3E7B5881CC2AC0600A0062D /* RNTusClient.h */,
+				B3E7B5891CC2AC0600A0062D /* RNTusClient.m */,
+				134814211AA4EA7D00B7C361 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58B511DA1A9E6C8500147676 /* RNTusClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNTusClient" */;
+			buildPhases = (
+				58B511D71A9E6C8500147676 /* Sources */,
+				58B511D81A9E6C8500147676 /* Frameworks */,
+				58B511D91A9E6C8500147676 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNTusClient;
+			productName = RCTDataManager;
+			productReference = 134814201AA4EA6300B7C361 /* libRNTusClient.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58B511D31A9E6C8500147676 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					58B511DA1A9E6C8500147676 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNTusClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 58B511D21A9E6C8500147676;
+			productRefGroup = 58B511D21A9E6C8500147676;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58B511DA1A9E6C8500147676 /* RNTusClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58B511D71A9E6C8500147676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5DB0E92040494700458D79 /* TUSSession.m in Sources */,
+				AC5DB0E82040494700458D79 /* TUSFileData.m in Sources */,
+				AC5DB0EE2040494700458D79 /* TUSData.m in Sources */,
+				B3E7B58A1CC2AC0600A0062D /* RNTusClient.m in Sources */,
+				AC5DB0EF2040494700458D79 /* TUSResumableUpload.m in Sources */,
+				AC5DB0EA2040494700458D79 /* TUSAssetData.m in Sources */,
+				AC5DB0EB2040494700458D79 /* TUSUploadStore.m in Sources */,
+				AC5DB0ED2040494700458D79 /* TUSFileUploadStore.m in Sources */,
+				AC5DB0EC2040494700458D79 /* TUSErrors.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		58B511ED1A9E6C8500147676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		58B511EE1A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58B511F01A9E6C8500147676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNTusClient;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		58B511F11A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNTusClient;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNTusClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B511ED1A9E6C8500147676 /* Debug */,
+				58B511EE1A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNTusClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B511F01A9E6C8500147676 /* Debug */,
+				58B511F11A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
+}
