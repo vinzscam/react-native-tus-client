@@ -1,6 +1,6 @@
 {
   "name": "react-native-tus-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native client for the tus resumable upload protocol https://tus.io/",
   "main": "dist/index.js",
   "scripts": {
