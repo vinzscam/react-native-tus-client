@@ -110,11 +110,11 @@ RCT_EXPORT_METHOD(resume:(NSString *)uploadId withCallback:(RCTResponseSenderBlo
 {
     TUSResumableUpload *upload = [self restoreUpload:uploadId];
     if(upload == nil) {
-      callback(@[@YES]);
+      callback(@[@NO]);
       return;
     }
     [upload resume];
-    callback(@[]);
+    callback(@[@YES]);
 }
 
 RCT_EXPORT_METHOD(abort:(NSString *)uploadId withCallback:(RCTResponseSenderBlock)callback)
