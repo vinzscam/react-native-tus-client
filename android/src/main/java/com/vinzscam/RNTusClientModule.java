@@ -80,7 +80,7 @@ public class RNTusClientModule extends ReactContextBaseJavaModule {
       this.executorsMap.put(uploadId, executor);
       callback.invoke(uploadId);
     } catch(FileNotFoundException | MalformedURLException e) {
-      callback.invoke((Object)null);
+      callback.invoke((Object)null, e.getMessage());
     }
   }
 
