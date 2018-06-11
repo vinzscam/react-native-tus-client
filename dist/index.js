@@ -21,7 +21,7 @@ class Upload {
      * Start or resume the upload using the specified file.
      * If no file property is available the error handler will be called.
      */
-    async start() {
+    start() {
         if (!this.file) {
             this.emitError(new Error('tus: no file or stream to upload provided'));
             return;
@@ -30,10 +30,11 @@ class Upload {
             this.emitError(new Error('tus: no endpoint provided'));
             return;
         }
-        if (!this.uploadId) {
-            await this.createUpload();
-        }
-        this.resume();
+        (this.uploadId
+            ? Promise.resolve()
+            : this.createUpload())
+            .then(() => this.resume())
+            .catch(e => this.emitError(e));
     }
     /**
      * Abort the currently running upload request and don't continue.
@@ -67,10 +68,13 @@ class Upload {
         return new Promise((resolve, reject) => {
             const { metadata, headers, endpoint } = this.options;
             const settings = { metadata, headers, endpoint };
-            RNTusClient.createUpload(this.file, settings, (uploadId) => {
+            RNTusClient.createUpload(this.file, settings, (uploadId, errorMessage) => {
                 this.uploadId = uploadId;
                 if (uploadId == null) {
-                    reject(null);
+                    const error = errorMessage
+                        ? new Error(errorMessage)
+                        : null;
+                    reject(error);
                 }
                 else {
                     this.subscribe();

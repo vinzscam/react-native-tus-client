@@ -49,7 +49,7 @@ declare class Upload {
      * Start or resume the upload using the specified file.
      * If no file property is available the error handler will be called.
      */
-    start(): Promise<void>;
+    start(): void;
     /**
      * Abort the currently running upload request and don't continue.
      * You can resume the upload by calling the start method again.
