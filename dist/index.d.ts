@@ -2,6 +2,8 @@
 interface Options {
     /** URL used to create a new upload */
     endpoint: string;
+    chunkSize: number;
+    requestPayloadSize: number;
     /** An object with custom header values used in all requests. */
     headers?: object;
     /** An object with string values used as additional meta data
@@ -39,6 +41,7 @@ declare class Upload {
     private options;
     private subscriptions;
     private uploadId;
+    private aborting;
     /**
      *
      * @param file The file absolute path.

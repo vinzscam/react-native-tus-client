@@ -11,6 +11,11 @@ const tusEventEmitter = new NativeEventEmitter(RNTusClient);
 interface Options {
   /** URL used to create a new upload */
   endpoint: string;
+  
+  chunkSize: number;
+
+  requestPayloadSize: number;
+  
   /** An object with custom header values used in all requests. */
   headers?: object;
   /** An object with string values used as additional meta data
@@ -56,6 +61,8 @@ class Upload {
   private subscriptions: any[] = [];
   private uploadId: string;
 
+  private aborting: boolean;
+
   /**
    *
    * @param file The file absolute path.
@@ -63,6 +70,7 @@ class Upload {
    */
   constructor (file: string, options: Options) {
     this.file = file;
+    this.aborting = false;
     this.options = Object.assign({ }, defaultOptions, options);
   }
 
@@ -71,6 +79,8 @@ class Upload {
    * If no file property is available the error handler will be called.
    */
   public start () {
+    this.aborting = false;
+
     if (!this.file) {
       this.emitError(new Error(
         'tus: no file or stream to upload provided'
@@ -99,6 +109,7 @@ class Upload {
    */
   public abort () {
     if (this.uploadId) {
+      this.aborting = true;
       RNTusClient.abort(this.uploadId, (err?: Error) => {
         if (err) {
           this.emitError(err);
@@ -126,8 +137,8 @@ class Upload {
   private createUpload (): Promise<void> {
     return new Promise((resolve, reject) => {
 
-      const { metadata, headers, endpoint } = this.options;
-      const settings = { metadata, headers, endpoint };
+      const { metadata, headers, endpoint, chunkSize, requestPayloadSize } = this.options;
+      const settings = { metadata, headers, endpoint, chunkSize, requestPayloadSize }; 
 
       RNTusClient.createUpload(
         this.file,
@@ -154,7 +165,10 @@ class Upload {
       payload => {
         if (payload.uploadId === this.uploadId) {
           this.url = payload.uploadUrl;
-          this.onSuccess();
+          if (!this.aborting) {
+            this.onSuccess();
+            this.aborting = false;
+          } 
           this.unsubscribe();
         }
       }

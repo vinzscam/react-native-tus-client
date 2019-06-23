@@ -117,6 +117,8 @@ options | object | The options argument used to setup your tus upload. See below
 Property | Type | Mandatory | Description
 -------- | ---- | --------- | :----------
 endpoint | string | **Yes** | URL used to create the upload
+chunkSize | int | **Yes** | chunkSize used to create the upload
+requestPayloadSize | int | **Yes** | requestPayloadSize used to create the upload
 headers | object | No | An object with custom header values used in all requests.
 metadata | object | No | An object with string values used as additional meta data which will be passed along to the server when (and only when) creating a new upload. Can be used for filenames, file types etc.
 onError | function | No | a function called once an error appears. The arguments will be an `Error` instance.

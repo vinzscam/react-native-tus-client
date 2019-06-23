@@ -15,6 +15,7 @@ class Upload {
     constructor(file, options) {
         this.subscriptions = [];
         this.file = file;
+        this.aborting = false;
         this.options = Object.assign({}, defaultOptions, options);
     }
     /**
@@ -22,6 +23,7 @@ class Upload {
      * If no file property is available the error handler will be called.
      */
     start() {
+        this.aborting = false;
         if (!this.file) {
             this.emitError(new Error('tus: no file or stream to upload provided'));
             return;
@@ -42,6 +44,7 @@ class Upload {
      */
     abort() {
         if (this.uploadId) {
+            this.aborting = true;
             RNTusClient.abort(this.uploadId, (err) => {
                 if (err) {
                     this.emitError(err);
@@ -66,8 +69,8 @@ class Upload {
     }
     createUpload() {
         return new Promise((resolve, reject) => {
-            const { metadata, headers, endpoint } = this.options;
-            const settings = { metadata, headers, endpoint };
+            const { metadata, headers, endpoint, chunkSize, requestPayloadSize } = this.options;
+            const settings = { metadata, headers, endpoint, chunkSize, requestPayloadSize };
             RNTusClient.createUpload(this.file, settings, (uploadId, errorMessage) => {
                 this.uploadId = uploadId;
                 if (uploadId == null) {
@@ -87,7 +90,10 @@ class Upload {
         this.subscriptions.push(tusEventEmitter.addListener('onSuccess', payload => {
             if (payload.uploadId === this.uploadId) {
                 this.url = payload.uploadUrl;
-                this.onSuccess();
+                if (!this.aborting) {
+                    this.onSuccess();
+                    this.aborting = false;
+                }
                 this.unsubscribe();
             }
         }));
