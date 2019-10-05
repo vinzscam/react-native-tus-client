@@ -2,10 +2,10 @@
   "name": "react-native-tus-client",
   "version": "1.0.3",
   "description": "React Native client for the tus resumable upload protocol https://tus.io/",
-  "main": "dist/index.js",
+  "main": "src/index.js",
+  "typings": "src/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "react-native",
@@ -26,12 +26,5 @@
   "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.41.2"
-  },
-  "devDependencies": {
-    "@types/react-native": "^0.52.13",
-    "tslint": "^5.9.1",
-    "tslint-config-standard": "^7.0.0",
-    "typescript": "^2.7.2"
-  },
-  "typings": "dist/index.d.ts"
+  }
 }
