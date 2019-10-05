@@ -1,13 +1,17 @@
 import { NativeModules, NativeEventEmitter } from 'react-native';
+
 const { RNTusClient } = NativeModules;
 const tusEventEmitter = new NativeEventEmitter(RNTusClient);
+
 const defaultOptions = {
     headers: {},
     metadata: {}
 };
+
 /** Class representing a tus upload */
 class Upload {
-    /**
+
+  /**
      *
      * @param file The file absolute path.
      * @param settings The options argument used to setup your tus upload.
@@ -17,6 +21,7 @@ class Upload {
         this.file = file;
         this.options = Object.assign({}, defaultOptions, options);
     }
+
     /**
      * Start or resume the upload using the specified file.
      * If no file property is available the error handler will be called.
@@ -36,6 +41,7 @@ class Upload {
             .then(() => this.resume())
             .catch(e => this.emitError(e));
     }
+
     /**
      * Abort the currently running upload request and don't continue.
      * You can resume the upload by calling the start method again.
@@ -49,6 +55,7 @@ class Upload {
             });
         }
     }
+
     resume() {
         RNTusClient.resume(this.uploadId, (hasBeenResumed) => {
             if (!hasBeenResumed) {
@@ -56,6 +63,7 @@ class Upload {
             }
         });
     }
+
     emitError(error) {
         if (this.options.onError) {
             this.options.onError(error);
@@ -64,6 +72,7 @@ class Upload {
             throw error;
         }
     }
+
     createUpload() {
         return new Promise((resolve, reject) => {
             const { metadata, headers, endpoint } = this.options;
@@ -83,6 +92,7 @@ class Upload {
             });
         });
     }
+
     subscribe() {
         this.subscriptions.push(tusEventEmitter.addListener('onSuccess', payload => {
             if (payload.uploadId === this.uploadId) {
@@ -102,19 +112,23 @@ class Upload {
             }
         }));
     }
+
     unsubscribe() {
         this.subscriptions.forEach(subscription => subscription.remove());
     }
+
     onSuccess() {
         this.options.onSuccess && this.options.onSuccess();
     }
+
     onProgress(bytesUploaded, bytesTotal) {
         this.options.onProgress
             && this.options.onProgress(bytesUploaded, bytesTotal);
     }
+
     onError(error) {
         this.options.onError && this.options.onError(error);
     }
 }
+
 export { Upload };
-//# sourceMappingURL=index.js.map
