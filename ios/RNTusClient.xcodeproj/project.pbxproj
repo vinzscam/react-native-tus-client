@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC5DB0E82040494700458D79 /* TUSFileData.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0DB2040494600458D79 /* TUSFileData.m */; };
-		AC5DB0E92040494700458D79 /* TUSSession.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0DD2040494700458D79 /* TUSSession.m */; };
-		AC5DB0EA2040494700458D79 /* TUSAssetData.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0DF2040494700458D79 /* TUSAssetData.m */; };
-		AC5DB0EB2040494700458D79 /* TUSUploadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0E02040494700458D79 /* TUSUploadStore.m */; };
-		AC5DB0EC2040494700458D79 /* TUSErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0E12040494700458D79 /* TUSErrors.m */; };
-		AC5DB0ED2040494700458D79 /* TUSFileUploadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0E22040494700458D79 /* TUSFileUploadStore.m */; };
-		AC5DB0EE2040494700458D79 /* TUSData.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0E62040494700458D79 /* TUSData.m */; };
-		AC5DB0EF2040494700458D79 /* TUSResumableUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB0E72040494700458D79 /* TUSResumableUpload.m */; };
 		B3E7B58A1CC2AC0600A0062D /* RNTusClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNTusClient.m */; };
 /* End PBXBuildFile section */
 
@@ -32,24 +24,6 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNTusClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNTusClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC5DB0D62040494600458D79 /* TUSErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSErrors.h; sourceTree = "<group>"; };
-		AC5DB0D72040494600458D79 /* TUSResumableUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSResumableUpload.h; sourceTree = "<group>"; };
-		AC5DB0D82040494600458D79 /* TUSSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSSession.h; sourceTree = "<group>"; };
-		AC5DB0D92040494600458D79 /* TUSFileUploadStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSFileUploadStore.h; sourceTree = "<group>"; };
-		AC5DB0DA2040494600458D79 /* TUSUploadStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSUploadStore.h; sourceTree = "<group>"; };
-		AC5DB0DB2040494600458D79 /* TUSFileData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSFileData.m; sourceTree = "<group>"; };
-		AC5DB0DC2040494700458D79 /* TUSResumableUpload+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TUSResumableUpload+Private.h"; sourceTree = "<group>"; };
-		AC5DB0DD2040494700458D79 /* TUSSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSSession.m; sourceTree = "<group>"; };
-		AC5DB0DE2040494700458D79 /* TUSFileData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSFileData.h; sourceTree = "<group>"; };
-		AC5DB0DF2040494700458D79 /* TUSAssetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSAssetData.m; sourceTree = "<group>"; };
-		AC5DB0E02040494700458D79 /* TUSUploadStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSUploadStore.m; sourceTree = "<group>"; };
-		AC5DB0E12040494700458D79 /* TUSErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSErrors.m; sourceTree = "<group>"; };
-		AC5DB0E22040494700458D79 /* TUSFileUploadStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSFileUploadStore.m; sourceTree = "<group>"; };
-		AC5DB0E32040494700458D79 /* TUSKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSKit.h; sourceTree = "<group>"; };
-		AC5DB0E42040494700458D79 /* TUSData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSData.h; sourceTree = "<group>"; };
-		AC5DB0E52040494700458D79 /* TUSAssetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSAssetData.h; sourceTree = "<group>"; };
-		AC5DB0E62040494700458D79 /* TUSData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSData.m; sourceTree = "<group>"; };
-		AC5DB0E72040494700458D79 /* TUSResumableUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSResumableUpload.m; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNTusClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNTusClient.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNTusClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTusClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,24 +50,6 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				AC5DB0E52040494700458D79 /* TUSAssetData.h */,
-				AC5DB0DF2040494700458D79 /* TUSAssetData.m */,
-				AC5DB0E42040494700458D79 /* TUSData.h */,
-				AC5DB0E62040494700458D79 /* TUSData.m */,
-				AC5DB0D62040494600458D79 /* TUSErrors.h */,
-				AC5DB0E12040494700458D79 /* TUSErrors.m */,
-				AC5DB0DE2040494700458D79 /* TUSFileData.h */,
-				AC5DB0DB2040494600458D79 /* TUSFileData.m */,
-				AC5DB0D92040494600458D79 /* TUSFileUploadStore.h */,
-				AC5DB0E22040494700458D79 /* TUSFileUploadStore.m */,
-				AC5DB0E32040494700458D79 /* TUSKit.h */,
-				AC5DB0D72040494600458D79 /* TUSResumableUpload.h */,
-				AC5DB0E72040494700458D79 /* TUSResumableUpload.m */,
-				AC5DB0DC2040494700458D79 /* TUSResumableUpload+Private.h */,
-				AC5DB0D82040494600458D79 /* TUSSession.h */,
-				AC5DB0DD2040494700458D79 /* TUSSession.m */,
-				AC5DB0DA2040494600458D79 /* TUSUploadStore.h */,
-				AC5DB0E02040494700458D79 /* TUSUploadStore.m */,
 				B3E7B5881CC2AC0600A0062D /* RNTusClient.h */,
 				B3E7B5891CC2AC0600A0062D /* RNTusClient.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -139,6 +95,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -156,15 +113,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC5DB0E92040494700458D79 /* TUSSession.m in Sources */,
-				AC5DB0E82040494700458D79 /* TUSFileData.m in Sources */,
-				AC5DB0EE2040494700458D79 /* TUSData.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNTusClient.m in Sources */,
-				AC5DB0EF2040494700458D79 /* TUSResumableUpload.m in Sources */,
-				AC5DB0EA2040494700458D79 /* TUSAssetData.m in Sources */,
-				AC5DB0EB2040494700458D79 /* TUSUploadStore.m in Sources */,
-				AC5DB0ED2040494700458D79 /* TUSFileUploadStore.m in Sources */,
-				AC5DB0EC2040494700458D79 /* TUSErrors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

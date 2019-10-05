@@ -25,6 +25,10 @@
     return self;
 }
 
++ (BOOL)requiresMainQueueSetup {
+  return NO;
+}
+
 - (TUSUploadStore *)uploadStore {
     if(_uploadStore == nil) {
         NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -76,7 +80,7 @@ RCT_EXPORT_METHOD(createUpload:(NSString *)fileUrl
       ? [fileUrl substringFromIndex:7]
       : fileUrl
     ];
-    TUSResumableUpload *upload = [session createUploadFromFile:url headers:headers metadata:metadata];
+    TUSResumableUpload *upload = [session createUploadFromFile:url retry:3 headers:headers metadata:metadata];
 
     [self.endpoints setObject:endpoint forKey: upload.uploadId];
 
