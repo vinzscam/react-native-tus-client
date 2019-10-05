@@ -140,6 +140,7 @@ public class RNTusClientModule extends ReactContextBaseJavaModule {
       uploader = client.resumeOrCreateUpload(upload);
       uploader.setChunkSize(1024);
       uploader.setRequestPayloadSize(10 * 1024 * 1024);
+
       do {
         long totalBytes = upload.getSize();
         long bytesUploaded = uploader.getOffset();
