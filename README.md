@@ -15,7 +15,13 @@ or
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-tus-client`
+```
+# RN >= 0.60
+cd ios && pod install
+
+# RN < 0.60
+react-native link react-native-tus-client
+```
 
 ### Manual installation
 
