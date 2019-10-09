@@ -20,6 +20,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.UUID;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -135,20 +137,34 @@ public class RNTusClientModule extends ReactContextBaseJavaModule {
 
     protected void makeAttempt() throws ProtocolException, IOException {
       uploader = client.resumeOrCreateUpload(upload);
-      uploader.setChunkSize(1024 * 10);
+      uploader.setChunkSize(1024);
       uploader.setRequestPayloadSize(10 * 1024 * 1024);
 
-      do {
-        long totalBytes = upload.getSize();
-        long bytesUploaded = uploader.getOffset();
-        WritableMap params = Arguments.createMap();
-        params.putString("uploadId", uploadId);
-        params.putDouble("bytesWritten", bytesUploaded);
-        params.putDouble("bytesTotal", totalBytes);
-        reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(ON_PROGRESS, params);
-      } while (uploader.uploadChunk() > -1 && !shouldFinish);
+      Timer progressTicker = new Timer();
 
+      progressTicker.scheduleAtFixedRate(new TimerTask() {
+        @Override
+        public void run() {
+          sendProgressEvent(upload.getSize(), uploader.getOffset());
+        }
+      }, 0, 500);
+
+      do {} while (uploader.uploadChunk() > -1 && !shouldFinish);
+
+      sendProgressEvent(upload.getSize(), upload.getSize());
+
+      progressTicker.cancel();
       uploader.finish();
+    }
+
+    private void sendProgressEvent(long bytesTotal, long bytesUploaded) {
+      WritableMap params = Arguments.createMap();
+
+      params.putString("uploadId", uploadId);
+      params.putDouble("bytesWritten", bytesUploaded);
+      params.putDouble("bytesTotal", bytesTotal);
+
+      reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(ON_PROGRESS, params);
     }
 
     public void finish() throws ProtocolException, IOException {
