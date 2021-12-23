@@ -13,6 +13,7 @@ import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
+import java.lang.Exception;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -79,7 +80,7 @@ public class RNTusClientModule extends ReactContextBaseJavaModule {
       TusRunnable executor = new TusRunnable(fileUrl, uploadId, endpoint, metadata, headers);
       this.executorsMap.put(uploadId, executor);
       callback.invoke(uploadId);
-    } catch (FileNotFoundException | MalformedURLException e) {
+    } catch (Exception e) {
       callback.invoke((Object) null, e.getMessage());
     }
   }
@@ -103,7 +104,7 @@ public class RNTusClientModule extends ReactContextBaseJavaModule {
         executor.finish();
       }
       callback.invoke((Object) null);
-    } catch (IOException | ProtocolException e) {
+    } catch (Exception e) {
       callback.invoke(e);
     }
   }
@@ -188,7 +189,7 @@ public class RNTusClientModule extends ReactContextBaseJavaModule {
         params.putString("uploadId", uploadId);
         params.putString("uploadUrl", uploadUrl);
         reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(ON_SUCCESS, params);
-      } catch (ProtocolException | IOException e) {
+      } catch (Exception e) {
         WritableMap params = Arguments.createMap();
         params.putString("uploadId", uploadId);
         params.putString("error", e.toString());
